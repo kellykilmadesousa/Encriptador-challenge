@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icon/wand-magic-sparkles-solid.svg" type="image/x-icon" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+  </head>
+  <body>
+    <!-- <header>
+      <nav>
+        <img class="logo" src="./img/logo.png" alt="logo" />
+      </nav>
+    </header> -->
+    <main>
+      <section>
+        <div class="section-container">
+          <div class="encriptar">
+            <textarea
+              name="texto"
+              class="texto"
+              id="texto"
+              cols="30"
+              rows="10"
+              placeholder="Digite seu texto"
+            ></textarea>
+            <div class="section-side">
+              <img
+                  class="icon-atencao"
+                  src="./img/bi_exclamation-circle-fill.png"
+                  alt="icon de aviso"
+                />
+              <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="buttons">
+              <button class="btn-encriptar" type="button" onclick="encriptar()">
+                Encriptar
+              </button>
+              <input
+                type="button"
+                class="btn-desencriptar"
+                value="Desencriptar"
+                onclick="desencriptar()"
+              />
+            </div>
+          </div>
+          <div class="encriptado">
+            <img src="img/imagem-principal.png" alt="" id="imagemPrincipal" 
+            />
+            <div class="mensagem-encriptada" id="mensagem-encriptada">
+              <h2 id="titulo-mensagem">Nenhuma mensagem encontrada</h2>
+              <p id="paragrafo">
+                Informe o texto ou palavra desejada.
+              </p>
+              <button class="btn-copiar" id="copiar" onclick="copiar()">Copiar</button>
+            </div>
+          </div>
+        </div>
+            </main>
+      </section>
+  </body>
+  <footer>
+    <div><p class="footer-text">Desenvolvido por <span>Kelly Kilma</span></p></div>
+    <div class="icons-footer">
+      <a
+        href="https://github.com/kellykilmadesousa"
+        title="me acompanhe no github"
+        target="_blank"
+      >
+        <img class="icone" alt="github" src="icon/github.png" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/kellykilma/"
+        title="me acompanhe no linkedin"
+      >
+        <img class="icone" alt="linkedin" src="icon/linkedin.png" />
+      </a>
+      <a
+        href="https://twitter.com/iamkeesousa"
+        title="me siga no twitter"
+        target="_blank"
+      >
+        <img class="icone" alt="instagram" src="icon/instagram.png" />
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</html>
