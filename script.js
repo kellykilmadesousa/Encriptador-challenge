@@ -5,11 +5,11 @@ function encriptar() {
   let imagemPrincipal = document.getElementById("imagemPrincipal");
 
   let textoCifrado = texto
-    .replace(/e/, "enter")
-    .replace(/i/, "imes")
-    .replace(/a/, "ai")
-    .replace(/o/, "ober")
-    .replace(/u/, "ufat");
+    .replace(/e/g, "enter")
+    .replace(/i/g, "imes")
+    .replace(/a/g, "ai")
+    .replace(/o/g, "ober")
+    .replace(/u/g, "ufat");
 
   if (texto.length != 0) {
     document.getElementById("texto").value = textoCifrado;
@@ -20,6 +20,11 @@ function encriptar() {
     imagemPrincipal.src = "./img/imagem-interrogacao.png";
     tituloMensagem.textContent = "Nenhuma mensagem foi encontrada";
     paragrafo.textContent = "Informe o texto ou palavra desejada.";
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Você precisa inserir o texto ou palavra!",
+    });
   }
 }
 
@@ -30,11 +35,11 @@ function desencriptar() {
   let imagemPrincipal = document.getElementById("imagemPrincipal");
 
   let textoCifrado = texto
-    .replace(/enter/, "e")
-    .replace(/imes/, "i")
-    .replace(/ai/, "a")
-    .replace(/ober/, "o")
-    .replace(/ufat/, "u");
+    .replace(/enter/g, "e")
+    .replace(/imes/g, "i")
+    .replace(/ai/g, "a")
+    .replace(/ober/g, "o")
+    .replace(/ufat/g, "u");
 
   if (texto.length != 0) {
     document.getElementById("texto").value = textoCifrado;
@@ -45,6 +50,11 @@ function desencriptar() {
     imagemPrincipal.src = "./img/imagem-interrogacao.png";
     tituloMensagem.textContent = "Nenhuma mensagem foi encontrada";
     paragrafo.textContent = "Informe o texto ou palavra desejada.";
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Você precisa inserir o texto ou palavra!",
+    });
   }
 }
 
@@ -52,16 +62,28 @@ function copiar() {
   let textoCop = document.getElementById("texto").value;
 
   if (textoCop.trim() === "") {
-    alert("O campo de texto está vazio. Por favor, digite algo para copiar.");
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Você precisa inserir o texto ou palavra!",
+    });
     return;
   }
 
   navigator.clipboard
     .writeText(textoCop)
     .then(() => {
-      alert("Texto copiado.");
+      Swal.fire({
+        title: "Texto copiado!",
+        icon: "success"
+      });
     })
     .catch((err) => {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Erro ao copiar texto!", 
+      });
       console.error("Erro ao copiar texto: ", err);
     });
 }

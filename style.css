@@ -12,6 +12,7 @@
   --color4: #d8dfe8;
   --color5: #fff;
   --color6: #343a40;
+  --color7: rgba(5, 45, 205, 0.236);
   --font: 'Poppins';
 }
 
@@ -58,7 +59,7 @@ main {
   font-family: "Poppins", sans-serif; 
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 150%;
   background-color: var(--color1);
 }
@@ -89,7 +90,7 @@ main {
   font-family: "Poppins", sans-serif; 
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.8rem;
   color: var(--color3);
   line-height: 150%;
   opacity: 0.8;
@@ -117,10 +118,11 @@ main {
   gap: 8px;
   width: 25%;
   background-color: var(--color2);
-  border-radius: 24px;
+  border-radius: 1.8rem;
+  box-shadow: 0px 24px 32px -8px var(--color7);
   font-family: "Poppins", sans-serif; 
-  font-size: 18px;
-  line-height: 19px;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
   text-align: center;
   color: var(--color1);
 }
@@ -136,11 +138,12 @@ main {
   width: 25%;
   background: var(--color4);
   border: 1px solid var(--color2);
-  border-radius: 24px;
+  border-radius: 1.8rem;
+  box-shadow: 0px 24px 32px -8px var(--color7);
   font-family: "Poppins", sans-serif; 
   font-weight: 400;
-  font-size: 18px;
-  line-height: 19px;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
   text-align: center;
   color: var(--color2);
 }
@@ -155,13 +158,15 @@ main {
 .btn-copiar {
   font-family: "Poppins", sans-serif; ;
   border: 1px solid var(--color2);
-  border-radius: 24px;
+  border-radius: 1.8rem;
+  box-shadow: 0px 24px 32px -8px var(--color7);
   color: var(--color2);
   cursor: pointer;
-  height: 67px;
-  margin-top: 190px;
+  height: 50%;
+  margin-top: 40%;
   position: absolute;
-  width: 336px;
+  width: 45%;
+  transition: 0.5s;
 }
 
 .btn-copiar:hover{
@@ -178,8 +183,8 @@ main {
   height: 82%;
   left: 60%;
   top: 5%;
-  background: var(--color);
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  background: var(--color1);
+  box-shadow: 0px 24px 32px -8px var(--color7);
   border-radius: 32px;
 }
 
@@ -250,6 +255,7 @@ footer {
   width: 40px;
   background-color: var(--color5);
   border-radius: 10px;
+  box-shadow: 0px 0px 30px -8px var(--color5);
 }
 
 .icone:hover {
@@ -264,7 +270,7 @@ div .footer-text{
   font-family: "Poppins", sans-serif; 
   font-style: normal;
   font-weight: 600;
-  font-size: 14px; 
+  font-size: 0.8rem; 
   line-height: 1.5; 
   color: var(--color5); 
   text-align: center; 
